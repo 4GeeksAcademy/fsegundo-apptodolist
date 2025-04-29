@@ -26,17 +26,17 @@ export const Todolist = () => {
             <div className="tareas">
             <h1> <strong>TAREAS DE SEGUNDO</strong> </h1>
                 <input
-                    type="text"
-                    value={inputValue}
+                    type="text"style={{width: '350px', height: '40px', backgroundColor: 'white', borderRadius: '5px'}}
+                    value={inputValue} 
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={handleKeyDown}
                 />
                 {
                     tasks.map((task, index) => (
-                        <li key={index} className="task-item">
+                        <ul key={index} className="task-item" style={{width: '350px', height: '40px', backgroundColor: 'light-grey'}}>
                             {task}
-                            <button onClick={() => deletetask(index)}>X</button>
-                        </li>
+                            <button onClick={() => deletetask(index)}type="button" class="delete-btn btn btn-outline-danger">x</button>
+                        </ul>
                     )
 
                     )

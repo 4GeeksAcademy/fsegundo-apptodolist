@@ -1,7 +1,22 @@
 .tareas {
     display: block;
     justify-items: center;
-    background-color: beige;
+    background-color: white;
+    margin-bottom: 10px;
 
 }
+.delete-btn {
+    display: none;
+    margin-left: 210px;
+    font-size: 8px;
+   
+}
+.task-item:hover .delete-btn {
+    display: inline-block;
+}
 
+.task-item {
+    font-size: 25px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
