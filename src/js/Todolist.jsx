@@ -22,20 +22,20 @@ export const Todolist = () => {
     };
     return (
         <>
-           
-            <div className="tareas">
-            <h1> <strong>TAREAS DE SEGUNDO</strong> </h1>
+
+            <div className="tareas" style={{ fontFamily: 'initial' }}>
+                <h1> <strong>TAREAS DE SEGUNDO</strong> </h1>
                 <input
-                    type="text"style={{width: '350px', height: '40px', backgroundColor: 'white', borderRadius: '5px'}}
-                    value={inputValue} 
+                    type="text" style={{ width: '350px', height: '40px', backgroundColor: 'white', borderRadius: '5px', marginBottom: '10px' }}
+                    value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={handleKeyDown}
                 />
                 {
                     tasks.map((task, index) => (
-                        <ul key={index} className="task-item" style={{width: '350px', height: '40px', backgroundColor: 'light-grey'}}>
+                        <ul key={index} className="task-item" style={{ width: '350px', height: '40px'}}>
                             {task}
-                            <button onClick={() => deletetask(index)}type="button" class="delete-btn btn btn-outline-danger">x</button>
+                            <button onClick={() => deletetask(index)} type="button" class="delete-btn btn btn-outline-danger">x</button>
                         </ul>
                     )
 
